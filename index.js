@@ -110,7 +110,7 @@ async function DetalleCat(nombre_categoria) {
 
 async function abrirCat(url) {
     let detalle = await DetalleCat(url);
-    console.log(detalle)
+    //console.log(detalle)
     if (detalle) {
         cuerpo.innerHTML = '';
         let card = '';
