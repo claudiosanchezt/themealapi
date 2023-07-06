@@ -310,7 +310,7 @@ async function listarCarrusel() {
                 </div>
               </div><!-- Fin Carrusel--><!-- slider que no es slider -->
                 `;
-                console.log(carrusel);
+                //console.log(carrusel);
       if (data.data) {
           resultado_carrusel.innerHTML = carrusel;
         } else {
@@ -319,7 +319,7 @@ async function listarCarrusel() {
     })
     .catch(error => {
       console.error(error);
-      resultado_carrusel.innerHTML = '<p>Ocurrió un error al listar los carruseles.</p>'+error;
+      resultado_carrusel.innerHTML = '<p>Ocurrió un error al listar los carruseles.</p>';
     });
 }
 listarRecetas(url);
