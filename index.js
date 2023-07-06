@@ -235,7 +235,7 @@ async function listarPaises() {
       .then(data => {
         let paises = '';
     for (let i = 0; i < data.data.length; i++) {
-        paises += `<a class="dropdown-item" href="#!" onclick="abrirPais('${data.data[i].nombre}')">${data.data[i].nombre}</a></li>
+        paises += `<a class="dropdown-item" href="#cuperpoHtml" onclick="abrirPais('${data.data[i].nombre}')">${data.data[i].nombre}</a></li>
                    <hr class="dropdown-divider">
                 `;
     }
@@ -259,7 +259,7 @@ async function listarCategorias() {
       .then(data => {
         let categoria = '';
     for (let i = 0; i < data.data.length; i++) {
-        categoria += `<li><a class="dropdown-item" href="#!" onclick="abrirCat('${data.data[i].nombre}')">${data.data[i].nombre}</a></li>
+        categoria += `<li><a class="dropdown-item" href="#cuperpoHtml" onclick="abrirCat('${data.data[i].nombre}')">${data.data[i].nombre}</a></li>
                    <hr class="dropdown-divider">
                 `;
     }
