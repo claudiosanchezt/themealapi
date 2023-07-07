@@ -1,7 +1,7 @@
 let buscanombre = document.getElementById('nombreReceta');
 let butonBuscar = document.getElementById('buscarReceta');
 let miModal = new bootstrap.Modal(document.getElementById('miModal'))
-let cuerpo = document.getElementById('cuperpoHtml');
+let cuerpo = document.getElementById('cuerpoHtml');
 let cuerpoModal =  document.getElementById('cuerpoModal');
 let resultado_paises = document.getElementById('resultadopaises');
 let resultado_categoria = document.getElementById('resultadocategoria');
@@ -125,9 +125,9 @@ async function abrirCat(url) {
                 <div class="card mb-3 shadow-sm text-center" style="max-width: 80%;height: auto;">
                   <img src="${detalle.data[i].url_imagen}" class="card-img-top" style="max-width: 100%;height: auto;" alt="${detalle.data[i].nombre}">
                   <div class="card-body">
-                    <h5 class="card-title">Nombre  : ${detalle.data[i].nombre}</h5>
-                    <p class="card-text">id : ${detalle.data[i].id_receta}</p>
+                    <h5 class="card-title">Nombre  : ${detalle.data[i].nombre}</h5>                    
                     <p class="card-text">Categoria      : ${url}</p>
+                    <p class="card-text">Pais : ${detalle.data[i].nombre_pais}</p>
                     <button class="btn btn-primary" onclick="abrirModal('${urlModal}${detalle.data[i].id_receta}')">Detalle</button>
                     </div>
                 </div>
@@ -165,7 +165,7 @@ async function abrirPais(url) {
                   <img src="${detalle.data[i].url_imagen}" class="card-img-top" style="max-width: 100%;height: auto;" alt="${detalle.data[i].nombre}">
                   <div class="card-body">
                     <h5 class="card-title">Nombre  : ${detalle.data[i].nombre}</h5>
-                    <p class="card-text">id : ${detalle.data[i].id_receta}</p>
+                    <p class="card-text">Categoria : ${detalle.data[i].nombre_cat}</p>
                     <p class="card-text">Pais      : ${url}</p>
                     <button class="btn btn-primary" onclick="abrirModal('${urlModal}${detalle.data[i].id_pais}')">Detalle</button>
                     </div>
@@ -235,7 +235,7 @@ async function listarPaises() {
       .then(data => {
         let paises = '';
     for (let i = 0; i < data.data.length; i++) {
-        paises += `<a class="dropdown-item" href="#cuperpoHtml" onclick="abrirPais('${data.data[i].nombre}')">${data.data[i].nombre}</a></li>
+        paises += `<a class="dropdown-item" href="#cuerpoHtml" onclick="abrirPais('${data.data[i].nombre}')">${data.data[i].nombre}</a></li>
                    <hr class="dropdown-divider">
                 `;
     }
@@ -259,7 +259,7 @@ async function listarCategorias() {
       .then(data => {
         let categoria = '';
     for (let i = 0; i < data.data.length; i++) {
-        categoria += `<li><a class="dropdown-item" href="#cuperpoHtml" onclick="abrirCat('${data.data[i].nombre}')">${data.data[i].nombre}</a></li>
+        categoria += `<li><a class="dropdown-item" href="#cuerpoHtml" onclick="abrirCat('${data.data[i].nombre}')">${data.data[i].nombre}</a></li>
                    <hr class="dropdown-divider">
                 `;
     }
