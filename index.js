@@ -31,7 +31,7 @@ butonBuscar.addEventListener('click', () => {
                     <h5 class="card-title">Nombre  : ${meal.nombre}</h5>
                     <p class="card-text">Categoria : ${meal.nombre_cat}</p>
                     <p class="card-text">Pais      : ${meal.nombre_pais}</p>
-                    <button class="btn btn-primary" onclick="abrirModal('${urlModal}${meal.id_receta}')"> Detalle </button>
+                    <button class="btn btn-primary" onclick="abrirModal('${urlModal}/${meal.id_receta}')"> Detalle </button>
                   </div>
                 </div>
               </div>
@@ -70,7 +70,7 @@ async function listarRecetas(url2) {
                     <h5 class="card-title">Nombre  : ${meal.nombre}</h5>
                     <p class="card-text">Categoria : ${meal.nombre_cat}</p>
                     <p class="card-text">Pais      : ${meal.nombre_pais}</p>
-                    <button class="btn btn-primary" onclick="abrirModal('${urlModal}${meal.id_receta}')"> Detalle </button>
+                    <button class="btn btn-primary" onclick="abrirModal('${urlModal}/${meal.id_receta}')"> Detalle </button>
                   </div>
                 </div>
               </div>
@@ -127,7 +127,7 @@ async function abrirCat(url) {
                     <h5 class="card-title">Nombre  : ${detalle.data[i].nombre}</h5>                    
                     <p class="card-text">Categoria      : ${url}</p>
                     <p class="card-text">Pais : ${detalle.data[i].nombre_pais}</p>
-                    <button class="btn btn-primary" onclick="abrirModal('${urlModal}${detalle.data[i].id_receta}')">Detalle</button>
+                    <button class="btn btn-primary" onclick="abrirModal('${urlModal}/${detalle.data[i].id_receta}')">Detalle</button>
                     </div>
                 </div>
               </div>
@@ -166,7 +166,7 @@ async function abrirPais(url) {
                     <h5 class="card-title">Nombre  : ${detalle.data[i].nombre}</h5>
                     <p class="card-text">Categoria : ${detalle.data[i].nombre_cat}</p>
                     <p class="card-text">Pais      : ${url}</p>
-                    <button class="btn btn-primary" onclick="abrirModal('${urlModal}${detalle.data[i].id_pais}')">Detalle</button>
+                    <button class="btn btn-primary" onclick="abrirModal('${urlModal}/${detalle.data[i].id_pais}')">Detalle</button>
                     </div>
                 </div>
               </div>
