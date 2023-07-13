@@ -19,7 +19,7 @@ butonBuscar.addEventListener('click', () => {
       .then(data => {
         cuerpo.innerHTML = '';
         let contador = 1;
-        console.log(data.data);
+        //console.log(data.data);
         if (data.data) {
           data.data.forEach(meal => {
             if (contador <= 8) {
