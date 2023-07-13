@@ -56,7 +56,6 @@ async function listarRecetas(url2) {
     cargando.classList.remove('d-none');
     fetch(url2)
       .then(response => response.json())
-
       .then(data => {
         cuerpo.innerHTML = '';
         let contador = 1;
