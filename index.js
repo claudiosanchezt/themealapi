@@ -7,7 +7,7 @@ let resultado_paises = document.getElementById('resultadopaises');
 let resultado_categoria = document.getElementById('resultadocategoria');
 let resultado_carrusel = document.getElementById('resultadocarrusel');
 let cargando = document.getElementById('cargando');
-let url = `http://localhost:4000/recetas/`;
+let url2 = `http://localhost:4000/recetas/`;
 let urlModal = `http://localhost:4000/recetas/`;
 
 butonBuscar.addEventListener('click', () => {
@@ -52,9 +52,9 @@ butonBuscar.addEventListener('click', () => {
         cuerpo.innerHTML = '<p class="card mb-3 shadow-sm text-center bg-warning" style="max-width: 100%;height: auto;">Ocurrió un error al buscar las recetas.</p>';
       });
   });
-async function listarRecetas(url) {
+async function listarRecetas(url2) {
     cargando.classList.remove('d-none');
-    fetch(url)
+    fetch(url2)
       .then(response => response.json())
 
       .then(data => {
@@ -322,7 +322,7 @@ async function listarCarrusel() {
       resultado_carrusel.innerHTML = '<p>Ocurrió un error al listar los carruseles.</p>';
     });
 }
-listarRecetas(url);
+listarRecetas(url2);
 listarPaises();
 listarCategorias();
 listarCarrusel();
